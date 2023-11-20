@@ -4,135 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="normalize" href="./normalize.css">
     <title>Ninja Mail</title>
 </head>
-
+<!-- note: be specific before img container, and do 4 categories for the img class (desktop-photo, desktop-logo, mobile-photo, mobile-logo)
+look up descendant selectors in the css selectors and pseudo classes  -->
 <body>
-    <!-- nav -->
-    <div class="nav">
+    <!-- nav- use nav instead of div for acessibility readers -->
+    <nav class="nav-wrapper">
         <!-- logo -->
-        <img src="./assets/Desktop Logos/Ninjamail.Logo.png" alt="logo">
+        <img class="desktop-logo" src="./assets/Desktop Logos/Ninjamail.Logo.png" alt="Ninja Mail Logo">
+        <img class="mobile-logo" src="./assets/Mobile Logos/Ninjamail.logo.png" alt="Ninja Mail Logo Mobile">
         <!-- links -->
-        <ul>
+        <ul class="nav-links">
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Partners</a></li>
         </ul>
         <button>Sign Up Free</button>
-    </div>
+    </nav>
 
     <!-- create stunning email section -->
-    <div>
-        <h1>create stunning email campaigns</h1>
-        <p>Create and launch email campagins that captivate your customers in just a few clicks.</p>
-        <button>try now</button>
-        <button>get a demo</button>
-        <img src="./assets/Desktop Images/photo hero.png" alt="photo hero">
-    </div>
+    <!-- use more lists for repetitive sections -->
+    <header>
+        <div class="header-info">
+            <div>
+                <h1>create stunning email campaigns</h1>
+                <p>Create and launch email campagins that captivate your customers in just a few clicks.</p>
+            </div>
+            <div>
+                <button>try now</button>
+                <button class="white-button">get a demo</button>
+            </div>
+        </div>
+        <div class="header-img-container">
+            <img class="desktop-photo" src="./assets/Desktop Images/photo hero.png" alt="photo hero">
+            <img class="mobile-photo" src="./assets/Mobile Images/hero photo.png" alt="photo hero">
+        </div>
+    </header>
     <!-- reach more customers section -->
-    <div>
-        <img src="./assets/Desktop Images/Video.png" alt="video"></video>
-        <h1>reach more customers</h1>
-        <button>learn how</button>
-    </div>
-    <!-- the source for proven section -->
-    <div class="lightgreenbackground">
-        <section>
-            <img src="./assets/Desktop Images/photo.png" alt="photo">
-            <caption>Launch campaigns but also find new customers. Our unique playform handles campaigns from start to
-                end.</caption>
-            <button>Learn More ></button>
-        </section>
-        <section>
-            <img src="./assets/Desktop Images/photo-1.png" alt="photo-1">
-            <caption>Start building and sharing with your team today. NinjaMail is renowned for its industry leading
-                team collaboration tools.</caption>
-            <button>Learn More ></button>
-        </section>
-        <section>
-            <h1>The source for proven, engaging email campaigns</h1>
-            <p>Whether you’re a startup, small
+    <!-- make img containters more clear -->
+    <!-- make classes for my sections= labels -->
+    <!-- change to desktop-photo- labelllssss -->
+    <section class="reach-more-frustration-box">
+        <div class="img-container-overlay">
+            <img class="desktop-photo" src="./assets/Desktop Images/Video.png" alt="video"></video>
+            <img class="mobile-photo" src="./assets/Mobile Images/VIDEO.png" alt="video">
+        </div>
+        <div class="overlay-text-reach-more">
+            <div><h2 class="reach-more-h2">reach more customers</h2></div>
+            <button class="reach-more-button">learn how</button>
+        </div>
+    </section>
+    <!-- the source for proven section- use section and article for the cards, div with img- class img-container, link -->
+    <section class="light-green-background">
+        <article class="card">
+            <div class="img-container">
+                <img class="desktop-photo" src="./assets/Desktop Images/photo.png" alt="photo">
+                <img class="mobile-photo" src="./assets/Mobile Images/photo.png" alt="photo">
+            </div>
+            <div class="indent">
+                <p>Launch campaigns but also find new customers. Our unique playform handles campaigns from start to
+                end.</p>
+                <p><a href="#">Learn More ></a></p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="img-container">
+                <img class="desktop-photo" src="./assets/Desktop Images/photo-1.png" alt="photo-1">
+                <img class="mobile-photo" src="./assets/Mobile Images/photo-1.png" alt="photo-1">
+            </div>
+            <div class="indent">
+                <p>Start building and sharing with your team today. NinjaMail is renowned for its industry leading
+                team collaboration tools.</p>
+                <p><a href="#">Learn More ></a></p>
+            </div>
+        </article>
+        <article class="the-source-info">
+            <h2>The source for proven, engaging email campaigns</h2>
+            <p>Whether you're a startup, small
                 business, e-commerce store, or
                 want to promote your app, NinjaMail
                 has the feature set tailored for
                 your business. </p>
-        </section>
-    </div>
-    <!-- frankie, camile, elayne, learn how others, join our list section -->
-    <div>
+        </article>
+    </section>
+    <!-- frankie, camile, elayne, learn how others, join our list section- overlay tactic -->
+    <section class="case-study-section">
+        <div class="gallery-cards">
+            <article class="card">
+                <div class="overlay-under-img">
+                    <img class="desktop-photo" src="./assets/Desktop Images/CaseStudy1.png" alt="Frankie">
+                    <img class="mobile-photo" src="./assets/Mobile Images/CaseStudy1.png" alt="Frankie">
+                </div>
+                <div class="overlay-text-case-study">
+                    <div class="case-study-h2"><h2>Frankie</h2></div>
+                    <div><p>Member since 2016</p></div>
+                </div>
+            </article>
+            <article class="card">
+                <div>
+                    <img class="desktop-photo" src="./assets/Desktop Images/CaseStudy2.png" alt="Camile">
+                    <img class="mobile-photo" src="./assets/Mobile Images/CaseStudy2.png" alt="Camile">
+                </div>
+                <div class="overlay-text-case-study">
+                    <div class="case-study-h2"><h2>Camile</h2></div>
+                    <div><p>Member since 2012</p></div>
+                </div>
+            </article>
+            <article class="card">
+                <div>
+                    <img class="desktop-photo" src="./assets/Desktop Images/CaseStudy3.png" alt="Elayne">
+                    <img class="mobile-photo" src="./assets/Mobile Images/CaseStudy3.png" alt="Elayne">
+                </div>
+                <div class="overlay-text-case-study">
+                    <div class="case-study-h2"><h2>Elayne</h2></div>
+                    <p>Member since 2018</p>
+                </div>
+            </article>
+            </div>
+            <div class="learn-how-others">
+                <h2>Learn how others are reaching their <span class="block">audience easier than ever before.</span></h2>
+                <form action="Enter your email"></form>
+                <input type="form" value="Enter your email">
+                <button>join our list</button>
+            </div>
+    </section>
+    <!-- all the best brands... insert logos here section, note: articles for images and text -->
+    <div class="logo-section">
         <section>
-            <img src="./assets/Desktop Images/CaseStudy1.png" alt="Frankie">
-            <h2>Frankie</h2>
-            <p>Member since 2016</p>
+            <h2 class="logo-h2">All the best brands <span class="block">already use us.</span></h2>
         </section>
-        <section>
-            <img src="./assets/Desktop Images/CaseStudy2.png" alt="Camile">
-            <h2>Camile</h2>
-            <p>Member since 2012</p>
-        </section>
-        <section>
-            <img src="./assets/Desktop Images/CaseStudy3.png" alt="Elayne">
-            <h2>Elayne</h2>
-            <p>Member since 2018</p>
-        </section>
-        <section>
-            <h1>Lean how others are reaching their audience easier than ever before.</h1>
-            <form action="Enter your email"></form>
-        </section>
-    </div>
-    <!-- all the best brands... insert logos here section -->
-    <div>
-        <h1>All the best brands already use us.</h1>
-        <section>
-            <img src="./assets/Desktop Logos/Logo1.png" alt="Last Knight Logo">
-            <img src="./assets/Desktop Logos/Logo2.png" alt="Dragon Eye Logo">
-            <img src="./assets/Desktop Logos/Logo3.png" alt="Quest AI Logo">
-            <img src="./assets/Desktop Logos/Logo4.png" alt="Radio Tee Logo">
-            <img src="./assets/Desktop Logos/Logo5.png" alt="Game Commerce Logo">
+        <section class="wrapper" >
+            <ul class="logo-list-part">
+                <li><img class="desktop-img" src="./assets/Desktop Logos/Logo1.png" alt="Last Knight Logo"></li>
+                <li><img class="desktop-img" src="./assets/Desktop Logos/Logo2.png" alt="Dragon Eye Logo"></li>
+                <li><img class="desktop-img" src="./assets/Desktop Logos/Logo3.png" alt="Quest AI Logo"></li>
+                <li><img class="desktop-img" src="./assets/Desktop Logos/Logo4.png" alt="Radio Tee Logo"></li>
+                <li><img class="desktop-img" src="./assets/Desktop Logos/Logo5.png" alt="Game Commerce Logo"></li>
+            </ul>
+            <ul class="logo-list-part">
+                <li><img class="mobile-logo" src="./assets/Mobile Logos/Logo1.png" alt="Last Knight Logo"> </li>
+                <li><img class="mobile-logo" src="./assets/Mobile Logos/Logo2.png" alt="Dragon Eye Logo"> </li>
+                <li><img class="mobile-logo" src="./assets/Mobile Logos/Logo3.png" alt="Quest AI Logo"> </li>
+                <li><img class="mobile-logo" src="./assets/Mobile Logos/Logo4.png" alt="Radio Tee Logo"> </li>
+                <li><img class="mobile-logo" src="./assets/Mobile Logos/Logo5.png" alt="Game Commerce Logo"></li>
+            </ul>
         </section>
     </div>
     <!-- get started today pick a plan section -->
-    <div class="darkgreenbackground">
-        <h1>Get started today!</h1>
-        <button>pick a plan</button>
-    </div>
-    <!-- nav clicker footer section -->
-    <div>
-        <img src="./assets/Desktop Logos/Ninjamail.Logo.png" alt="NinjaMailLogo">
-        <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Partners</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">Case Studies</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Medium</a></li>
-            <li><a href="#">Twiter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Slack</a></li>
-            <li><a href="#">Jobs</a></li>
-        </ul>
-    </div>
-    <!-- footer -->
+    <section class="dark-green-background">
+        <h2>Get started today!</h2>
+        <button class="white-button">pick a plan</button>
+    </section>
+    <!-- nav clicker footer section, ul with class names features, about us, socials, contact us -->
+    <!-- footer, article top chunk- logo plus list -->
     <footer>
-        <p>NinjaMail. © 2019, All rights reserved.</p>
-        <link><a href="#">Term & Conditions</a></link>
-        <link><a href="#">Privacy Policy</a></link>
+        <div class="bottom-info-top">
+            <div class="img-container">
+                <img class="desktop-logo" src="./assets/Desktop Logos/Ninjamail.Logo.png" alt="Ninja Mail Logo">
+                <img class="mobile-logo" src="./assets/Mobile Logos/Ninjamail.logo.png" alt="Ninja Mail Logo">
+             </div>
+            <div class="services-wrapper">
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Medium</a></li>
+                    <li><a href="#">Twiter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Slack</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="bottom-info">
+            <div>
+                <p>NinjaMail. © 2019, All rights reserved.</p>
+            </div>
+            <div class="terms-policies">
+                <link><a href="#">Term & Conditions</a></link>
+                <link><a href="#">Privacy Policy</a></link>
+            </div>
+        </div>
     </footer>
 
     <script src=".script/js"></script>

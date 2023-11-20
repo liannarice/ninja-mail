@@ -1,14 +1,266 @@
+/* typographic section, stripping styles, etc */
+/* css overlay for reach more customers- look on w3 schools */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway&display=swap');
+body{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+}
+h1{
+    font-family: 'Playfair Display';
+    font-size: 2.7rem;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+h2{
+    font-family: 'Playfair Display';
+    font-size: 2rem;
+    font-style: normal;
+    text-transform: initial;
+    font-weight: 900;
+}
+
 button {
     background-color: #4BA87D;
     color: white;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+.white-button{
+    background-color: white;
+    border: 1px solid  #4BA87D;
+    color:  #4BA87D;
 }
 
-.lightgreenbackground {
+/* light-green-background= that whole section */
+.light-green-background {
     background-color: #CAEAC7;
     color: black;
 }
 
-.darkgreenbackground{
+/* dark-green-background= that whole section */
+.dark-green-background{
     background-color: #4BA87D;
     color: white;
+}
+
+.mobile-photo,.mobile-logo {
+    display: none;
+}
+
+ul {
+list-style-type: none;
+}
+
+a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: right;
+    gap: 30px;
+}
+.nav-links a {
+    border-bottom: 3px solid #4BA87D;  
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-info {
+    /* max-width: 40%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 0 25px;
+}
+.header-img-container{
+    justify-content: right;
+    flex-grow: 1;
+    /* flex-shrink: 0;
+    flex-basis: 50%; */
+    /* width: 75%; */
+}
+.wrapper{
+    width: 80%;
+    border: 1px transparent;
+    margin: 0 auto;
+    /* margin 0 auto was used to centre the wrapper without flexbox */
+}
+.card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.indent{
+    padding: 0px 15px;
+}
+
+.reach-more-frustration-box{
+    position: relative;
+    top: 50%;
+    margin: 10% 15%;
+} 
+.img-container-overlay{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    /* margin-left: auto;
+    margin-bottom: auto; */
+    /* width: 60%; */
+}
+
+.reach-more-h2{
+    color: white;
+    text-transform: capitalize;
+    text-transform: 900;
+}
+
+.overlay-text-reach-more{
+        color: white;
+        position:absolute;
+        z-index: 3;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+.light-green-background{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.the-source-info{
+    padding: 30px;
+}
+
+.gallery-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+/* .overlay-under-img{
+    position:relative;
+    } */
+
+.card{
+    position:relative;
+}
+
+.overlay-text-case-study{
+    color: white;
+    position: absolute;
+    z-index: 3;
+    /* text-align: left;
+    justify-content: bottom; */
+    align-items: center;
+    width: 100%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    /* line height= a percentage of current font height */
+    line-height: 50%;
+    padding-left: 25px;
+   
+   
+   /* top: 50%;
+    bottom: 50%;
+    text-align: center; */
+    /* transform-origin: translate(); */
+    }
+    
+
+.learn-how-others{
+    text-align: center;
+    padding: 50px 0 ; 
+}
+.logo-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+.logo-h2{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+.block{
+    display: block;
+}
+
+.logo-list-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    /* padding: 0px 50px; */
+}
+
+.dark-green-background{
+    /* margin: auto; */
+    text-align: center;
+    padding: 50px 0 ;
+}
+
+.services-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.bottom-info-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bottom-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.terms-policies{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+footer{
+    margin: 15px 100px;
 }
